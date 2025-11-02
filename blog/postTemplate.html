@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -8,63 +7,101 @@
   <meta name="description" content="{{META_DESCRIPTION}}" />
   <link rel="canonical" href="https://fausting777.github.io/rettenHTML/blog/posts/{{POST-SLUG}}.html" />
 
-  <!-- Подключаем те же стили, что на главной -->
+  <!-- ==== Подключаем те же стили, что на главной ==== -->
   <link rel="stylesheet" href="../../themes/pkurg-eterna/assets/vendor/fontawesome/fontawesome-free-7.1.0-web/css/A.all.min.css.pagespeed.cf.sIQkw_JxIo.css">
   <link rel="stylesheet" href="../../themes/pkurg-eterna/assets/css/style.css">
 
   <style>
-    .container{max-width:60rem;margin:0 auto;padding:0 1rem}
+    body {
+      background-color: #0f172a; /* фон как на главной */
+      color: #f8fafc;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+    }
+    a { color: #f97316; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 60rem; margin: 0 auto; padding: 0 1rem; }
+    article {
+      background: #fff;
+      color: #111;
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      padding: 2rem;
+      margin-top: 3rem;
+    }
   </style>
+
+  <!-- ==== SEO JSON-LD ==== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{SEO_TITLE}}",
+    "description": "{{META_DESCRIPTION}}",
+    "image": "https://fausting777.github.io/rettenHTML/themes/pkurg-eterna/assets/img/siteimg/logo.svg",
+    "author": {
+      "@type": "Organization",
+      "name": "RETTER Schlüsseldienst Berlin",
+      "url": "https://fausting777.github.io/rettenHTML/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RETTER Schlüsseldienst Berlin",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://fausting777.github.io/rettenHTML/themes/pkurg-eterna/assets/img/siteimg/logo.svg"
+      }
+    },
+    "datePublished": "{{DATE}}",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://fausting777.github.io/rettenHTML/blog/posts/{{POST-SLUG}}.html"
+    }
+  }
+  </script>
 </head>
 
-<body class="bg-gray-900 text-white">
+<body>
 
   <!-- ===== HEADER ===== -->
-  <header class="bg-gray-900 border-b border-gray-700">
-    <div class="container py-4 text-center">
-      <a href="../../index.html" class="inline-flex items-center gap-3">
-        <img src="../../themes/pkurg-eterna/assets/img/siteimg/logo.svg" alt="RETTER Logo" class="w-8 h-8">
-        <span class="text-3xl font-extrabold uppercase tracking-widest">RETTER BERLIN</span>
-      </a>
-    </div>
+  <header class="py-6 border-b border-gray-700 text-center">
+    <a href="../../index.html" class="inline-flex items-center gap-3">
+      <img src="../../themes/pkurg-eterna/assets/img/siteimg/logo.svg" alt="RETTER Logo" class="w-10 h-10">
+      <span class="text-3xl font-extrabold uppercase tracking-widest text-orange-500">RETTER BERLIN</span>
+    </a>
   </header>
 
-  <!-- ===== MAIN ===== -->
-  <main class="py-10">
-    <div class="container">
-      <article class="bg-white text-gray-900 rounded-xl shadow-2xl p-6 md:p-10">
-        <h1 class="text-4xl font-black mb-4">{{H1}}</h1>
-        <p class="text-sm text-gray-500 mb-6">Veröffentlicht am {{DATE_READABLE}} · {{READING_TIME}}</p>
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="container">
+    <article>
+      <h1 class="text-4xl font-extrabold mb-3">{{H1}}</h1>
+      <p class="text-sm text-gray-500 mb-6">Veröffentlicht am {{DATE_READABLE}} · {{READING_TIME}}</p>
+      <div>{{HTML_CONTENT}}</div>
 
-        {{HTML_CONTENT}}
+      <div class="mt-10 p-6 rounded-xl" style="background:linear-gradient(135deg,#1e3a8a,#0f172a)">
+        <h2 class="text-2xl font-black mb-2 text-white">Schnelle Hilfe in Berlin – Festpreis 90€</h2>
+        <p class="text-white mb-4">
+          Tür zu? Schlüssel weg? Rufen Sie den Meister:
+          <a href="tel:+491755328410" class="font-bold underline text-orange-400">+49 1755 328410</a>
+          oder
+          <a href="https://wa.me/491755328410" target="_blank" class="font-bold underline text-orange-400">WhatsApp</a>.
+        </p>
+      </div>
 
-        <div class="mt-10 p-6 rounded-xl" style="background:linear-gradient(135deg,#3b3b3b 0%,#1a1a1a 100%)">
-          <h2 class="text-2xl font-black mb-2 text-white">Schnelle Hilfe in Berlin – Festpreis 90€</h2>
-          <p class="text-white mb-4">
-            Tür zu? Schlüssel weg? Rufen Sie den Meister:
-            <a href="tel:+491755328410" class="font-bold underline">+49 1755 328410</a>
-            oder
-            <a href="https://wa.me/491755328410" target="_blank" class="font-bold underline">WhatsApp</a>.
-          </p>
-        </div>
+      <hr class="my-10 border-gray-300" />
 
-        <hr class="my-10 border-gray-300" />
-
-        <div class="text-sm text-gray-600">
-          <a href="../../index.html" class="hover:underline">Startseite</a> ·
-          <a href="../index.html" class="hover:underline">Blog</a> ·
-          <a href="../../impressum.html" class="hover:underline">Impressum</a> ·
-          <a href="../../datenschutz.html" class="hover:underline">Datenschutz</a>
-        </div>
-      </article>
-    </div>
+      <div class="text-sm text-gray-600">
+        <a href="../../index.html">Startseite</a> ·
+        <a href="../index.html">Blog</a> ·
+        <a href="../../impressum.html">Impressum</a> ·
+        <a href="../../datenschutz.html">Datenschutz</a>
+      </div>
+    </article>
   </main>
 
   <!-- ===== FOOTER ===== -->
-  <footer class="bg-gray-800 text-gray-400 py-6 mt-12">
-    <div class="container text-center text-sm">
-      <p>&copy; 2025 RETTER Schlüsseldienst Berlin. Alle Rechte vorbehalten.</p>
-    </div>
+  <footer class="text-center text-sm text-gray-400 py-10">
+    <p>&copy; 2025 RETTER Schlüsseldienst Berlin. Alle Rechte vorbehalten.</p>
   </footer>
 </body>
 </html>
