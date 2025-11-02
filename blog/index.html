@@ -1,1 +1,62 @@
-<!DOCTYPE html><html><body><h1>RETTER Blog</h1><div id='blog-list'></div></body></html>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog – RETTER Schlüsseldienst Berlin</title>
+  <meta name="description" content="Tägliche Tipps zu Türöffnung, Schlosswechsel und Einbruchschutz in Berlin." />
+  <link rel="canonical" href="/blog/">
+  <meta property="og:title" content="RETTER Blog – Schlüsseldienst Wissen für Berlin">
+  <meta property="og:description" content="Tägliche Tipps zu Schlüsselnotdienst, Türöffnung und Sicherheit.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/blog/">
+  <meta property="og:image" content="/themes/pkurg-eterna/assets/img/siteimg/locksmith.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- тот же CSS, что на главной -->
+  <link rel="stylesheet" href="/themes/pkurg-eterna/assets/vendor/fontawesome/fontawesome-free-7.1.0-web/css/A.all.min.css.pagespeed.cf.sIQkw_JxIo.css" />
+  <style> .container{max-width:80rem;margin:0 auto;padding:0 1rem} </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+  <header class="bg-gray-900" style="border-bottom:1px solid #474747">
+    <div class="container py-3 text-center">
+      <a class="inline-flex items-center gap-3" href="/">
+        <img class="w-8 h-8" src="/themes/pkurg-eterna/assets/img/siteimg/logo.svg" alt="RETTER Logo">
+        <span class="text-3xl font-extrabold uppercase tracking-widest">RETTER BERLIN</span>
+      </a>
+      <nav class="mt-2 text-sm text-gray-400">
+        <a class="hover:text-white" href="/">Startseite</a>
+        <span class="mx-2 opacity-50">•</span>
+        <span class="text-white font-semibold">Blog</span>
+        <span class="mx-2 opacity-50">•</span>
+        <a class="hover:text-white" href="/impressum.html">Impressum</a>
+        <span class="mx-2 opacity-50">•</span>
+        <a class="hover:text-white" href="/datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="py-10">
+    <div class="container">
+      <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-4">RETTER Blog</h1>
+      <p class="text-gray-300 text-xl mb-8">Tägliche, verständliche Beiträge über Türöffnung, Schlosswechsel, Autoöffnung und Einbruchschutz in Berlin.</p>
+
+      <div id="blog-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+      <div class="flex items-center justify-center gap-3 mt-10" id="pager" aria-label="Pagination">
+        <button id="prevBtn" class="bg-red-600 hover:bg-red-700 rounded-xl px-4 py-2 font-bold disabled:opacity-40">Zurück</button>
+        <span id="pageInfo" class="text-gray-300"></span>
+        <button id="nextBtn" class="bg-red-600 hover:bg-red-700 rounded-xl px-4 py-2 font-bold disabled:opacity-40">Weiter</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-gray-400 py-6">
+    <div class="container text-center text-sm">
+      <p>&copy; 2025 RETTER Schlüsseldienst Berlin. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+  <script src="/blog/assets/blog.js" defer></script>
+</body>
+</html>
