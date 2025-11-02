@@ -1,1 +1,9 @@
-{"name": "retter-auto-blog", "version": "1.0.0"}
+{
+  "name": "retter-auto-blog",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate:post": "node tools/generator.js"
+  }
+}
