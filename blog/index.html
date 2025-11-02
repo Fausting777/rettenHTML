@@ -5,33 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog – RETTER Schlüsseldienst Berlin</title>
   <meta name="description" content="Tägliche Tipps zu Türöffnung, Schlosswechsel und Einbruchschutz in Berlin." />
-  <link rel="canonical" href="/blog/">
-  <meta property="og:title" content="RETTER Blog – Schlüsseldienst Wissen für Berlin">
-  <meta property="og:description" content="Tägliche Tipps zu Schlüsselnotdienst, Türöffnung und Sicherheit.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="/blog/">
-  <meta property="og:image" content="/themes/pkurg-eterna/assets/img/siteimg/locksmith.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- тот же CSS, что на главной -->
-  <link rel="stylesheet" href="/themes/pkurg-eterna/assets/vendor/fontawesome/fontawesome-free-7.1.0-web/css/A.all.min.css.pagespeed.cf.sIQkw_JxIo.css" />
+
+  <!-- ВАЖНО: относительные пути, т.к. блог лежит внутри /rettenHTML/blog/ -->
+  <link rel="stylesheet" href="../themes/pkurg-eterna/assets/vendor/fontawesome/fontawesome-free-7.1.0-web/css/A.all.min.css.pagespeed.cf.sIQkw_JxIo.css" />
   <style> .container{max-width:80rem;margin:0 auto;padding:0 1rem} </style>
 </head>
 <body class="bg-gray-900 text-white">
 
   <header class="bg-gray-900" style="border-bottom:1px solid #474747">
     <div class="container py-3 text-center">
-      <a class="inline-flex items-center gap-3" href="/">
-        <img class="w-8 h-8" src="/themes/pkurg-eterna/assets/img/siteimg/logo.svg" alt="RETTER Logo">
+      <a class="inline-flex items-center gap-3" href="../index.html">
+        <img class="w-8 h-8" src="../themes/pkurg-eterna/assets/img/siteimg/logo.svg" alt="RETTER Logo">
         <span class="text-3xl font-extrabold uppercase tracking-widest">RETTER BERLIN</span>
       </a>
       <nav class="mt-2 text-sm text-gray-400">
-        <a class="hover:text-white" href="/">Startseite</a>
+        <a class="hover:text-white" href="../index.html">Startseite</a>
         <span class="mx-2 opacity-50">•</span>
         <span class="text-white font-semibold">Blog</span>
         <span class="mx-2 opacity-50">•</span>
-        <a class="hover:text-white" href="/impressum.html">Impressum</a>
+        <a class="hover:text-white" href="../impressum.html">Impressum</a>
         <span class="mx-2 opacity-50">•</span>
-        <a class="hover:text-white" href="/datenschutz.html">Datenschutz</a>
+        <a class="hover:text-white" href="../datenschutz.html">Datenschutz</a>
       </nav>
     </div>
   </header>
@@ -57,6 +51,7 @@
     </div>
   </footer>
 
-  <script src="/blog/assets/blog.js" defer></script>
+  <!-- ВАЖНО: относительный путь -->
+  <script src="assets/blog.js" defer></script>
 </body>
 </html>
