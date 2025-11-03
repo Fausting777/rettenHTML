@@ -7,29 +7,18 @@
   <meta name="description" content="{{META_DESCRIPTION}}" />
   <link rel="canonical" href="https://fausting777.github.io/rettenHTML/blog/posts/{{POST-SLUG}}.html" />
 
-  <!-- ==== Подключаем те же стили, что на главной ==== -->
-  <link rel="stylesheet" href="../../themes/pkurg-eterna/assets/vendor/fontawesome/fontawesome-free-7.1.0-web/css/A.all.min.css.pagespeed.cf.sIQkw_JxIo.css">
+  <link rel="stylesheet" href="../../themes/pkurg-eterna/assets/vendor/fontawesome/fontawesome-free-7.1.0-web/css/A.all.min.css.pagespeed.cf.sIQkw_JxIo.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="../../themes/pkurg-eterna/assets/vendor/fontawesome/fontawesome-free-7.1.0-web/css/A.all.min.css.pagespeed.cf.sIQkw_JxIo.css">
+  </noscript>
   <link rel="stylesheet" href="../../themes/pkurg-eterna/assets/css/style.css">
 
-  <style>
-    body {
-      background-color: #0f172a; /* фон как на главной */
-      color: #f8fafc;
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-    }
-    a { color: #f97316; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .container { max-width: 60rem; margin: 0 auto; padding: 0 1rem; }
-    article {
-      background: #fff;
-      color: #111;
-      border-radius: 1rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      padding: 2rem;
-      margin-top: 3rem;
-    }
-  </style>
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
   <!-- ==== SEO JSON-LD ==== -->
   <script type="application/ld+json">
@@ -63,45 +52,190 @@
 
 <body>
 
-  <!-- ===== HEADER ===== -->
-  <header class="py-6 border-b border-gray-700 text-center">
-    <a href="../../index.html" class="inline-flex items-center gap-3">
-      <img src="../../themes/pkurg-eterna/assets/img/siteimg/logo.svg" alt="RETTER Logo" class="w-10 h-10">
-      <span class="text-3xl font-extrabold uppercase tracking-widest text-orange-500">RETTER BERLIN</span>
-    </a>
+  <header class="bg-gray-900 text-white" style="border-bottom: 1px solid #474747;">
+    <div class="container mx-auto px-4 py-3 flex flex-col gap-3 text-center md:flex-row md:items-center md:justify-between">
+      <a class="inline-flex items-center justify-center gap-3" href="../../index.html">
+        <span class="key-icon text-red-500">
+          <img src="../../themes/pkurg-eterna/assets/img/siteimg/logo.svg" alt="RETTER Schlüsseldienst Logo" class="w-10 h-10">
+        </span>
+        <span class="text-3xl font-extrabold uppercase tracking-widest text-white">RETTER BERLIN</span>
+      </a>
+      <nav class="text-sm text-gray-300 flex items-center justify-center gap-3">
+        <a class="hover:text-white transition" href="../../index.html">Startseite</a>
+        <span class="opacity-40">•</span>
+        <a class="hover:text-white transition" href="../index.html">Blog</a>
+        <span class="opacity-40">•</span>
+        <a class="hover:text-white transition" href="../../impressum.html">Impressum</a>
+        <span class="opacity-40">•</span>
+        <a class="hover:text-white transition" href="../../datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- ===== MAIN CONTENT ===== -->
-  <main class="container">
-    <article>
-      <h1 class="text-4xl font-extrabold mb-3">{{H1}}</h1>
-      <p class="text-sm text-gray-500 mb-6">Veröffentlicht am {{DATE_READABLE}} · {{READING_TIME}}</p>
-      <div>{{HTML_CONTENT}}</div>
+  <section class="bg-gray-900 text-white shadow-2xl py-10">
+    <div class="container mx-auto px-4 text-center max-w-3xl">
+      <span class="inline-flex items-center text-xs font-semibold uppercase tracking-[0.4em] text-red-400 mb-3">Ratgeber</span>
+      <h1 class="text-4xl md:text-5xl font-black tracking-tight">{{H1}}</h1>
+      <p class="text-sm md:text-base text-gray-300 mt-4">Veröffentlicht am {{DATE_READABLE}} · {{READING_TIME}}</p>
+    </div>
+  </section>
 
-      <div class="mt-10 p-6 rounded-xl" style="background:linear-gradient(135deg,#1e3a8a,#0f172a)">
-        <h2 class="text-2xl font-black mb-2 text-white">Schnelle Hilfe in Berlin – Festpreis 90€</h2>
-        <p class="text-white mb-4">
-          Tür zu? Schlüssel weg? Rufen Sie den Meister:
-          <a href="tel:+491755328410" class="font-bold underline text-orange-400">+49 1755 328410</a>
-          oder
-          <a href="https://wa.me/491755328410" target="_blank" class="font-bold underline text-orange-400">WhatsApp</a>.
-        </p>
-      </div>
+  <main class="py-12 bg-gray-100">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <article class="bg-white text-gray-900 rounded-3xl shadow-2xl border border-gray-200 p-8 md:p-12">
+        <div class="article-body" style="color:#374151; line-height:1.75; font-size:1.1rem;">
+          {{HTML_CONTENT}}
+        </div>
 
-      <hr class="my-10 border-gray-300" />
+        <div class="mt-12 p-8 rounded-2xl shadow-xl" style="background:linear-gradient(135deg,#1e3a8a,#0f172a);">
+          <h2 class="text-2xl font-black mb-3 text-white">Schnelle Hilfe in Berlin – Festpreis 90€</h2>
+          <p class="text-white mb-4" style="line-height:1.6;">
+            Tür zu? Schlüssel weg? Rufen Sie den Meister:
+            <a href="tel:+491755328410" class="font-bold underline text-orange-300">+49 1755 328410</a>
+            oder
+            <a href="https://wa.me/491755328410" target="_blank" class="font-bold underline text-orange-300">WhatsApp</a>.
+          </p>
+        </div>
 
-      <div class="text-sm text-gray-600">
-        <a href="../../index.html">Startseite</a> ·
-        <a href="../index.html">Blog</a> ·
-        <a href="../../impressum.html">Impressum</a> ·
-        <a href="../../datenschutz.html">Datenschutz</a>
-      </div>
-    </article>
+        <hr class="my-12 border-gray-200" />
+
+        <div class="text-sm text-gray-600 flex flex-wrap gap-3">
+          <a class="hover:text-red-600 transition" href="../../index.html">Startseite</a>
+          <span>·</span>
+          <a class="hover:text-red-600 transition" href="../index.html">Blog</a>
+          <span>·</span>
+          <a class="hover:text-red-600 transition" href="../../impressum.html">Impressum</a>
+          <span>·</span>
+          <a class="hover:text-red-600 transition" href="../../datenschutz.html">Datenschutz</a>
+        </div>
+      </article>
+    </div>
   </main>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="text-center text-sm text-gray-400 py-10">
-    <p>&copy; 2025 RETTER Schlüsseldienst Berlin. Alle Rechte vorbehalten.</p>
+  <footer class="bg-gray-800 text-gray-400 py-6">
+    <div class="container mx-auto px-4 text-center text-sm">
+      <p>&copy; 2025 Ihr Meister-Schlüsseldienst. Alle Rechte vorbehalten. | Festpreis-Garantie gilt für zugezogene Türen in den üblichen Geschäftszeiten.</p>
+      <p class="mt-2">
+        <a href="../../impressum.html" class="hover:text-white transition duration-200">Impressum</a> |
+        <a href="../../datenschutz.html" class="hover:text-white transition duration-200">Datenschutz</a> |
+        <a href="../../schlusseldienst-kleinmachnow.html" class="hover:text-white transition duration-200">Kleinmachnow</a> |
+        <a href="../../schlusseldienst-teltow.html" class="hover:text-white transition duration-200">Teltow</a> |
+        <a href="../../schlusseldienst-zelendorf.html" class="hover:text-white transition duration-200">Zelendorf</a> |
+        <a href="../../kontakt.html" class="hover:text-white transition duration-200">Kontakt</a> |
+        <a href="../index.html" class="hover:text-white transition duration-200">Blog</a> |
+        <a href="#" class="hover:text-white transition duration-200" id="manage-cookies">Cookies</a>
+      </p>
+    </div>
   </footer>
+
+  <div id="cookie-consent" class="cookie-consent">
+    <div class="cookie-content">
+      <label class="cookie-checkbox">
+        <input type="checkbox" id="necessary-cookies" checked disabled>
+        <span class="checkmark"></span>
+        Notwendige Cookies (essentiell)
+      </label><br>
+
+      <label class="cookie-checkbox">
+        <input type="checkbox" id="analytics-cookies">
+        <span class="checkmark"></span>
+        Analyse-Cookies (z.B. Google Analytics)
+      </label><br>
+
+      <label class="cookie-checkbox">
+        <input type="checkbox" id="marketing-cookies">
+        <span class="checkmark"></span>
+        Marketing-Cookies (z.B. Facebook Pixel)
+      </label><br>
+
+      <p>Wir verwenden Cookies, um die Funktionalität unserer Website zu verbessern. Bitte stimmen Sie zu, welche Cookies wir verwenden dürfen. Weitere Informationen finden Sie in unserer <a href="../../datenschutz.html" target="_blank">Datenschutzerklärung</a>.</p>
+
+      <button id="accept-all" class="cookie-button">Alle akzeptieren</button>
+      <button id="decline-all" class="cookie-button">Nur notwendige akzeptieren</button>
+      <button id="save-preferences" class="cookie-button">Einstellungen speichern</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      if (window.location.pathname === '/privacy-policy') return;
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const consentPopup = document.getElementById('cookie-consent');
+        const manageCookiesLink = document.getElementById('manage-cookies');
+
+        const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+        const cookiePreferences = JSON.parse(localStorage.getItem('cookiePreferences')) || {};
+
+        if (!cookiesAccepted) {
+          consentPopup.style.display = 'flex';
+        }
+
+        if (cookiePreferences.analytics) {
+          loadAnalytics();
+        }
+        if (cookiePreferences.marketing) {
+          loadMarketingScripts();
+        }
+
+        document.getElementById('accept-all').addEventListener('click', function() {
+          const preferences = {
+            necessary: true,
+            analytics: true,
+            marketing: true
+          };
+          localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+          localStorage.setItem('cookiesAccepted', 'true');
+          applyCookiePreferences(preferences);
+          consentPopup.style.display = 'none';
+        });
+
+        document.getElementById('decline-all').addEventListener('click', function() {
+          const preferences = {
+            necessary: true,
+            analytics: false,
+            marketing: false
+          };
+          localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+          localStorage.setItem('cookiesAccepted', 'false');
+          consentPopup.style.display = 'none';
+        });
+
+        document.getElementById('save-preferences').addEventListener('click', function() {
+          const preferences = {
+            necessary: true,
+            analytics: document.getElementById('analytics-cookies').checked,
+            marketing: document.getElementById('marketing-cookies').checked
+          };
+          localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+          localStorage.setItem('cookiesAccepted', 'true');
+          applyCookiePreferences(preferences);
+          consentPopup.style.display = 'none';
+        });
+
+        manageCookiesLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          consentPopup.style.display = 'flex';
+        });
+
+        function applyCookiePreferences(preferences) {
+          if (preferences.analytics) {
+            loadAnalytics();
+          }
+          if (preferences.marketing) {
+            loadMarketingScripts();
+          }
+        }
+
+        function loadAnalytics() {
+          console.log('Google Analytics geladen');
+        }
+
+        function loadMarketingScripts() {
+          console.log('Marketing-Skripte geladen');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

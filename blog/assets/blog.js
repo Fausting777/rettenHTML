@@ -29,15 +29,15 @@
 
   function card(p){
     const d = new Date(p.date).toLocaleDateString('de-DE',{year:'numeric',month:'long',day:'numeric'});
-    // ССЫЛКА ТОЖЕ ОТНОСИТЕЛЬНАЯ ОТ /blog/
     return `
-      <article class="bg-white text-gray-900 rounded-xl shadow-2xl border-t-4 border-orange-600 hover:translate-y-[-4px] transition p-6">
-        <a href="posts/${p.slug}.html" class="block hover:underline">
-          <h2 class="text-2xl font-bold mb-2">${escapeHtml(p.title)}</h2>
+      <article class="bg-white text-gray-900 rounded-3xl shadow-2xl border border-gray-200 overflow-hidden transition-transform duration-300 hover:-translate-y-1">
+        <a href="posts/${p.slug}.html" class="block p-8 h-full">
+          <span class="inline-flex items-center text-xs font-semibold uppercase tracking-[0.3em] text-red-600 mb-4">Blog</span>
+          <h2 class="text-2xl font-extrabold mb-3 leading-snug text-gray-900">${escapeHtml(p.title)}</h2>
+          <p class="text-sm text-gray-500 mb-4">${d} · ${p.readingTime || '4 Min'}</p>
+          <p class="text-gray-700 mb-6 leading-relaxed">${escapeHtml(p.excerpt || '')}</p>
+          <span class="inline-flex items-center gap-2 text-red-600 font-semibold">Weiterlesen <i class="fa-solid fa-arrow-right"></i></span>
         </a>
-        <p class="text-sm text-gray-500 mb-3">${d} · ${p.readingTime || '4 Min'}</p>
-        <p class="text-gray-700 mb-4">${escapeHtml(p.excerpt || '')}</p>
-        <a class="inline-flex items-center gap-2 text-red-600 font-semibold hover:underline" href="posts/${p.slug}.html">Weiterlesen →</a>
       </article>`;
   }
 
