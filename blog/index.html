@@ -4,56 +4,205 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog – RETTER Schlüsseldienst Berlin</title>
-  <meta name="description" content="Tägliche Tipps zu Türöffnung, Schlosswechsel und Einbruchschutz in Berlin." />
+  <meta name="description" content="Tägliche Tipps zu Türöffnung, Schlosswechsel, Autoöffnung und Einbruchschutz in Berlin." />
 
-  <!-- ВАЖНО: относительные пути, т.к. блог лежит внутри /rettenHTML/
-  <!-- Подключаем стили из themes, один уровень выше -->
-<link rel="stylesheet" href="../themes/pkurg-eterna/assets/css/style.css">
-<link rel="stylesheet" href="../themes/pkurg-eterna/assets/vendor/fontawesome/fontawesome-free-7.1.0-web/css/A.all.min.css.pagespeed.cf.sIQkw_JxIo.css">
-  <style> .container{max-width:80rem;margin:0 auto;padding:0 1rem} </style>
+  <link rel="stylesheet" href="../themes/pkurg-eterna/assets/vendor/fontawesome/fontawesome-free-7.1.0-web/css/A.all.min.css.pagespeed.cf.sIQkw_JxIo.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="../themes/pkurg-eterna/assets/vendor/fontawesome/fontawesome-free-7.1.0-web/css/A.all.min.css.pagespeed.cf.sIQkw_JxIo.css">
+  </noscript>
+  <link rel="stylesheet" href="../themes/pkurg-eterna/assets/css/style.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+  <script src="../analytics.ahrefs.com/analytics.js" data-key="NstVbUUMRhNvqRluRVOTLQ" async></script>
 </head>
-<body class="bg-gray-900 text-white">
+<body>
 
-  <header class="bg-gray-900" style="border-bottom:1px solid #474747">
-    <div class="container py-3 text-center">
-      <a class="inline-flex items-center gap-3" href="../index.html">
-        <img class="w-8 h-8" src="../themes/pkurg-eterna/assets/img/siteimg/logo.svg" alt="RETTER Logo">
-        <span class="text-3xl font-extrabold uppercase tracking-widest">RETTER BERLIN</span>
+  <header class="bg-gray-900 text-white" style="border-bottom: 1px solid #474747;">
+    <div class="container mx-auto px-4 py-3 flex flex-col gap-3 text-center md:flex-row md:items-center md:justify-between">
+      <a class="inline-flex items-center justify-center gap-3" href="../index.html">
+        <span class="key-icon text-red-500">
+          <img src="../themes/pkurg-eterna/assets/img/siteimg/logo.svg" alt="RETTER Schlüsseldienst Logo" class="w-10 h-10">
+        </span>
+        <span class="text-3xl font-extrabold uppercase tracking-widest text-white">RETTER BERLIN</span>
       </a>
-      <nav class="mt-2 text-sm text-gray-400">
-        <a class="hover:text-white" href="../index.html">Startseite</a>
-        <span class="mx-2 opacity-50">•</span>
+      <nav class="text-sm text-gray-300 flex items-center justify-center gap-3">
+        <a class="hover:text-white transition" href="../index.html">Startseite</a>
+        <span class="opacity-40">•</span>
         <span class="text-white font-semibold">Blog</span>
-        <span class="mx-2 opacity-50">•</span>
-        <a class="hover:text-white" href="../impressum.html">Impressum</a>
-        <span class="mx-2 opacity-50">•</span>
-        <a class="hover:text-white" href="../datenschutz.html">Datenschutz</a>
+        <span class="opacity-40">•</span>
+        <a class="hover:text-white transition" href="../impressum.html">Impressum</a>
+        <span class="opacity-40">•</span>
+        <a class="hover:text-white transition" href="../datenschutz.html">Datenschutz</a>
       </nav>
     </div>
   </header>
 
-  <section class="py-10">
-    <div class="container">
-      <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-4">RETTER Blog</h1>
-      <p class="text-gray-300 text-xl mb-8">Tägliche, verständliche Beiträge über Türöffnung, Schlosswechsel, Autoöffnung und Einbruchschutz in Berlin.</p>
+  <section class="bg-gray-900 text-white shadow-2xl py-10">
+    <div class="container mx-auto px-4 py-4 text-center max-w-4xl">
+      <h1 class="text-4xl md:text-6xl font-black mb-4 tracking-tight">RETTER Blog</h1>
+      <p class="text-lg md:text-2xl text-gray-300 mb-6">
+        Aktuelle Tipps und Wissen rund um Türöffnungen, Schlosswechsel und Sicherheit in Berlin &amp; Umgebung.
+      </p>
+      <a href="tel:+491755328410" class="relative inline-flex items-center justify-center px-10 py-3 text-xl font-black text-white bg-red-600 rounded-xl hover:bg-red-700 transition duration-300 transform hover:scale-105 shadow-xl">
+        <span class="z-10 tracking-wider">24/7 Notdienst anrufen</span>
+      </a>
+    </div>
+  </section>
 
-      <div id="blog-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  <main class="py-12 bg-gray-100">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div id="blog-list" class="grid gap-8 md:grid-cols-2 xl:grid-cols-3"></div>
 
-      <div class="flex items-center justify-center gap-3 mt-10" id="pager" aria-label="Pagination">
-        <button id="prevBtn" class="bg-red-600 hover:bg-red-700 rounded-xl px-4 py-2 font-bold disabled:opacity-40">Zurück</button>
-        <span id="pageInfo" class="text-gray-300"></span>
-        <button id="nextBtn" class="bg-red-600 hover:bg-red-700 rounded-xl px-4 py-2 font-bold disabled:opacity-40">Weiter</button>
+      <div class="flex items-center justify-center gap-3 mt-12" id="pager" aria-label="Pagination">
+        <button id="prevBtn" class="bg-red-600 hover:bg-red-700 rounded-xl px-4 py-2 font-bold text-white disabled:opacity-40 disabled:cursor-not-allowed transition">Zurück</button>
+        <span id="pageInfo" class="text-gray-600 font-semibold"></span>
+        <button id="nextBtn" class="bg-red-600 hover:bg-red-700 rounded-xl px-4 py-2 font-bold text-white disabled:opacity-40 disabled:cursor-not-allowed transition">Weiter</button>
       </div>
+    </div>
+  </main>
+
+  <section class="py-12 md:py-16 bg-gray-900 text-white">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-red-500 mb-4">Benötigen Sie sofort Hilfe?</h2>
+      <p class="text-xl text-gray-300 mb-8">Ob zugefallene Tür oder defektes Schloss – ich bin schnell bei Ihnen in Berlin und Umgebung. Festpreis 90 € für zugefallene Türen.</p>
+      <a href="tel:+491755328410" class="relative inline-flex items-center justify-center px-12 py-5 text-2xl font-black text-white bg-red-600 rounded-xl hover:bg-red-700 transition duration-300 transform hover:scale-105 shadow-xl">
+        <span class="z-10 tracking-wider">Jetzt den Meister rufen</span>
+      </a>
     </div>
   </section>
 
   <footer class="bg-gray-800 text-gray-400 py-6">
-    <div class="container text-center text-sm">
-      <p>&copy; 2025 RETTER Schlüsseldienst Berlin. Alle Rechte vorbehalten.</p>
+    <div class="container mx-auto px-4 text-center text-sm">
+      <p>&copy; 2025 Ihr Meister-Schlüsseldienst. Alle Rechte vorbehalten. | Festpreis-Garantie gilt für zugezogene Türen in den üblichen Geschäftszeiten.</p>
+      <p class="mt-2">
+        <a href="../impressum.html" class="hover:text-white transition duration-200">Impressum</a> |
+        <a href="../datenschutz.html" class="hover:text-white transition duration-200">Datenschutz</a> |
+        <a href="../schlusseldienst-kleinmachnow.html" class="hover:text-white transition duration-200">Kleinmachnow</a> |
+        <a href="../schlusseldienst-teltow.html" class="hover:text-white transition duration-200">Teltow</a> |
+        <a href="../schlusseldienst-zelendorf.html" class="hover:text-white transition duration-200">Zelendorf</a> |
+        <a href="../kontakt.html" class="hover:text-white transition duration-200">Kontakt</a> |
+        <span class="text-white font-semibold">Blog</span> |
+        <a href="#" class="hover:text-white transition duration-200" id="manage-cookies">Cookies</a>
+      </p>
     </div>
   </footer>
 
-  <!-- ВАЖНО: относительный путь -->
+  <div id="cookie-consent" class="cookie-consent">
+    <div class="cookie-content">
+      <label class="cookie-checkbox">
+        <input type="checkbox" id="necessary-cookies" checked disabled>
+        <span class="checkmark"></span>
+        Notwendige Cookies (essentiell)
+      </label><br>
+
+      <label class="cookie-checkbox">
+        <input type="checkbox" id="analytics-cookies">
+        <span class="checkmark"></span>
+        Analyse-Cookies (z.B. Google Analytics)
+      </label><br>
+
+      <label class="cookie-checkbox">
+        <input type="checkbox" id="marketing-cookies">
+        <span class="checkmark"></span>
+        Marketing-Cookies (z.B. Facebook Pixel)
+      </label><br>
+
+      <p>Wir verwenden Cookies, um die Funktionalität unserer Website zu verbessern. Bitte stimmen Sie zu, welche Cookies wir verwenden dürfen. Weitere Informationen finden Sie in unserer <a href="../datenschutz.html" target="_blank">Datenschutzerklärung</a>.</p>
+
+      <button id="accept-all" class="cookie-button">Alle akzeptieren</button>
+      <button id="decline-all" class="cookie-button">Nur notwendige akzeptieren</button>
+      <button id="save-preferences" class="cookie-button">Einstellungen speichern</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      if (window.location.pathname === '/privacy-policy') return;
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const consentPopup = document.getElementById('cookie-consent');
+        const manageCookiesLink = document.getElementById('manage-cookies');
+
+        const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+        const cookiePreferences = JSON.parse(localStorage.getItem('cookiePreferences')) || {};
+
+        if (!cookiesAccepted) {
+          consentPopup.style.display = 'flex';
+        }
+
+        if (cookiePreferences.analytics) {
+          loadAnalytics();
+        }
+        if (cookiePreferences.marketing) {
+          loadMarketingScripts();
+        }
+
+        document.getElementById('accept-all').addEventListener('click', function() {
+          const preferences = {
+            necessary: true,
+            analytics: true,
+            marketing: true
+          };
+          localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+          localStorage.setItem('cookiesAccepted', 'true');
+          applyCookiePreferences(preferences);
+          consentPopup.style.display = 'none';
+        });
+
+        document.getElementById('decline-all').addEventListener('click', function() {
+          const preferences = {
+            necessary: true,
+            analytics: false,
+            marketing: false
+          };
+          localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+          localStorage.setItem('cookiesAccepted', 'false');
+          consentPopup.style.display = 'none';
+        });
+
+        document.getElementById('save-preferences').addEventListener('click', function() {
+          const preferences = {
+            necessary: true,
+            analytics: document.getElementById('analytics-cookies').checked,
+            marketing: document.getElementById('marketing-cookies').checked
+          };
+          localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+          localStorage.setItem('cookiesAccepted', 'true');
+          applyCookiePreferences(preferences);
+          consentPopup.style.display = 'none';
+        });
+
+        manageCookiesLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          consentPopup.style.display = 'flex';
+        });
+
+        function applyCookiePreferences(preferences) {
+          if (preferences.analytics) {
+            loadAnalytics();
+          }
+          if (preferences.marketing) {
+            loadMarketingScripts();
+          }
+        }
+
+        function loadAnalytics() {
+          console.log('Google Analytics geladen');
+        }
+
+        function loadMarketingScripts() {
+          console.log('Marketing-Skripte geladen');
+        }
+      });
+    })();
+  </script>
+
   <script src="assets/blog.js" defer></script>
 </body>
 </html>
